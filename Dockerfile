@@ -1,7 +1,7 @@
-FROM alpine:3.18
+FROM alpine:3.19
 
-# Enable community repository, install git, node, inspircd, and supervisor
-RUN echo "https://dl-cdn.alpinelinux.org/alpine/v3.18/community" >> /etc/apk/repositories \
+# Enable community repository, update index, and install dependencies
+RUN echo "https://dl-cdn.alpinelinux.org/alpine/v3.19/community" >> /etc/apk/repositories \
     && apk update \
     && apk add --no-cache \
         git \
